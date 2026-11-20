@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.idea/
+models/*.pkl
+mlruns/
+*.log
+.ipynb_checkpoints/
+Thumbs.db
+.DS_Store
+
+# ===============Folder================
+C:\Users\User\.ssh\ # Win + R
+# =====================================
