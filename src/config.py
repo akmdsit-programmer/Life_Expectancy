@@ -16,4 +16,18 @@ TARGET_COL = "Life expectancy"
 
 DROP_COLS = ["Country"]
 
-DROP_AFTER_FE = []
+DROP_AFTER_FE = [
+    "Measles",                    # → log_measles + has_measles_outbreak
+    "GDP",                        # → log_gdp + gdp_per_capita
+    "Population",                 # → log_population + gdp_per_capita
+    "percentage expenditure",     # → log_expenditure
+    "infant deaths",              # → log_infant_deaths + child_mortality_ratio
+    "under-five deaths",          # → log_under5_deaths + child_mortality_ratio
+    "HIV/AIDS",                   # → log_hiv + has_hiv_epidemic
+    "Hepatitis B",                # → immunization
+    "Polio",                      # → immunization
+    "Diphtheria",                 # → immunization
+    "thinness 1-19 years",        # → thinness_avg
+    "thinness 5-9 years",         # → thinness_avg
+    "Year",                       # → year_since_2000
+]
