@@ -46,4 +46,6 @@ def create_feature_engineering(df: pd.DataFrame) -> pd.DataFrame:
     # 9. Drop source columns (replaced by new ones)
     df = df.drop(columns=DROP_AFTER_FE, errors="ignore")
 
+    df = df.replace([np.inf, -np.inf], np.nan)
+
     return df
