@@ -3,7 +3,7 @@ from sklearn.base import BaseEstimator
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import Ridge
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import KFold
 from sklearn.pipeline import Pipeline
 from xgboost import XGBRegressor
 from catboost import CatBoostRegressor
@@ -30,5 +30,5 @@ def build_pipeline(model: BaseEstimator, preprocessor: ColumnTransformer) -> Pip
     ])
 
 
-def get_cv() -> StratifiedKFold:
-    return StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=RANDOM_STATE)
+def get_cv() -> KFold:
+    return KFold(n_splits=N_SPLITS, shuffle=True, random_state=RANDOM_STATE)
