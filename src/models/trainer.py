@@ -41,6 +41,6 @@ def get_best_model(results: dict) -> tuple[str, object]:
     logger.info('Start getting best model...')
     best_name = min(results, key=lambda x: results[x]['mean_rmse'])
     pipeline = results[best_name]['pipeline']
-    logger.info('Best model: %s (RMSE=)' , best_name, results[best_name]['mean_rmse'])
+    logger.info('Best model: %s (RMSE=%s)' , best_name, results[best_name]['mean_rmse'])
     logger.info('Finished getting best model.')
     return best_name, pipeline
