@@ -65,3 +65,43 @@ pip install -r requirements.txt
 ## Project Status
 
 In development.
+
+
+## API Example
+
+**Request:**
+
+```bash
+curl -X POST http://127.0.0.1:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Year": 2015,
+    "Status": "Developed",
+    "Adult Mortality": 75,
+    "infant deaths": 3,
+    "Alcohol": 9.5,
+    "percentage expenditure": 4500.0,
+    "Hepatitis B": 95,
+    "Measles": 10,
+    "BMI": 25.5,
+    "under-five deaths": 4,
+    "Polio": 96,
+    "Total expenditure": 8.5,
+    "Diphtheria": 96,
+    "HIV/AIDS": 0.1,
+    "GDP": 35000.0,
+    "Population": 5000000,
+    "thinness 1-19 years": 1.2,
+    "thinness 5-9 years": 1.0,
+    "Income composition of resources": 0.9,
+    "Schooling": 16.0
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "prediction": 84.29647813321405
+}
+```
